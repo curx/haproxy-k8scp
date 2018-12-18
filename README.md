@@ -17,6 +17,15 @@ KUBEAPI_VIP_STATS_PORT
 HAPROXY_BACKENDS
 ```
 
+## Example
+
+```bash
+docker run \
+  -e KUBEAPI_VIP_PORT="192.168.1.1" \
+  -e KUBEAPI_VIP_STATS_PORT="19001" \
+  -e HAPROXY_BACKENDS ="192.168.1.11,192.168.1.12:6443,a.b.c.d:1234" \
+  ...
+```
 
 ## Contributing
 
