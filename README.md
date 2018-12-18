@@ -7,14 +7,19 @@ This Docker Images is used for StaticPod on an Kubernetes Controlplane.
 ```
 # Configure the Kubernetes VirtualIP[:Port]
 # - mandatory
-KUBEAPI_VIP_PORT
+# 
+KUBEAPI_VIP_PORT="192.168.1.10"
 
 # Configure the Port for the HAProxy Stats Interface
-KUBEAPI_VIP_STATS_PORT 
+# Statistic Interface is located at http://$KUBEAPI_VIP_PORT:$KUBEAPI_VIP_STATS_PORT/stats
+# - optional, default is set to 9000
+#
+KUBEAPI_VIP_STATS_PORT="12345"
 
 # configure the BackendServers (List)
 # - mandatory
-HAPROXY_BACKENDS
+#
+HAPROXY_BACKENDS="backendserver1,backendserver2:port2,..."
 ```
 
 ## Example
