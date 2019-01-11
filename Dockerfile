@@ -1,4 +1,4 @@
-FROM haproxy:1.9.0-alpine
+FROM haproxy:1.9.1-alpine
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 RUN apk -U add socat
 COPY scripts//docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
