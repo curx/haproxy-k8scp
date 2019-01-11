@@ -7,6 +7,7 @@ This Docker Images is used for StaticPod on an Kubernetes Controlplane.
 ```
 # Configure the Kubernetes VirtualIP[:Port]
 # - mandatory
+#   if Port not set, Default to 6443
 # 
 KUBEAPI_VIP_PORT="192.168.1.10"
 
@@ -50,5 +51,5 @@ GPL-2
 ## Copyright
 
 ```
-Copyright (c) 2018 Thorsten Schifferdecker
+Copyright (c) 2018,2019 Thorsten Schifferdecker
 ```
