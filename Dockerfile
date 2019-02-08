@@ -1,4 +1,4 @@
-FROM haproxy:1.9.3-alpine
+FROM haproxy:1.9.4-alpine
 
 CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 
