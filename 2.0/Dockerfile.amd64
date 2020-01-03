@@ -7,7 +7,6 @@ LABEL maintainer="Thorsten Schifferdecker https://github.com/curx" \
   org.label-schema.schema-version="1.0"
 
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
 
 RUN apk -U --no-cache add socat
 
