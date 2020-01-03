@@ -1,5 +1,7 @@
 # haproxy for a high-available kubernetes controlplane (k8scp)
 
+[![Build Status](https://cloud.drone.io/api/badges/curx/haproxy-k8scp/status.svg)](https://cloud.drone.io/curx/haproxy-k8scp)
+
 This OCI container images is used for an StaticPod at a Kubernetes Controlplane.
 
 ## Available environment variables
