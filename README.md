@@ -11,7 +11,8 @@ This OCI container images is used for an StaticPod at a Kubernetes Controlplane.
 # - mandatory
 #   if Port not set, Default to 6443
 # 
-KUBEAPI_VIP_PORT="192.168.1.10"
+KUBEAPI_VIP="192.168.1.10"
+KUBEAPI_VIP_PORT="16443"
 
 # Configure the Port for the HAProxy Stats Interface
 # Statistic Interface is located at http://$KUBEAPI_VIP_PORT:$KUBEAPI_VIP_STATS_PORT/stats
@@ -29,9 +30,10 @@ HAPROXY_BACKENDS="backendserver1,backendserver2:port2,..."
 
 ```bash
 docker run \
-  -e KUBEAPI_VIP_PORT="192.168.1.1" \
+  -e KUBEAPI_VIP="0.0.0.0" \
+  -e KUBEAPI_VIP_PORT="6443" \
   -e KUBEAPI_VIP_STATS_PORT="19001" \
-  -e HAPROXY_BACKENDS ="192.168.1.11,192.168.1.12:6443,a.b.c.d:1234" \
+  -e HAPROXY_BACKENDS="192.168.1.11,192.168.1.12:6443,a.b.c.d:1234" \
   ...
 ```
 
