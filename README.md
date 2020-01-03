@@ -1,6 +1,6 @@
-# haproxy for a high-available kubernetes controlplane
+# haproxy for a high-available kubernetes controlplane (k8scp)
 
-This Docker Images is used for StaticPod on an Kubernetes Controlplane.
+This OCI container images is used for an StaticPod at a Kubernetes Controlplane.
 
 ## Available environment variables
 
@@ -51,5 +51,5 @@ GPL-2
 ## Copyright
 
 ```
-Copyright (c) 2018,2019 Thorsten Schifferdecker
+Copyright (c) 2018 Thorsten Schifferdecker
 ```

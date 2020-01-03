@@ -1,0 +1,14 @@
+FROM haproxy:1.9-alpine@sha256:f81ed3c122d48681c789825509f42eddc933692a0d1a1e488c7c05a941cdfa8a
+
+LABEL maintainer="Thorsten Schifferdecker https://github.com/curx" \
+  org.label-schema.vendor="Thorsten Schifferdecker" \
+  org.label-schema.name="haproxy-k8scp" \
+  org.label-schema.version="1.9" \
+  org.label-schema.schema-version="1.0"
+
+ENTRYPOINT ["entrypoint.sh"]
+CMD ["haproxy" "-f" "/usr/local/etc/haproxy/haproxy.cfg"]
+
+RUN apk -U --no-cache add socat
+
+COPY ./overlay ./overlay-amd64 /
