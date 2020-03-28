@@ -1,4 +1,4 @@
-FROM haproxy:2.0-alpine@sha256:66b6a624afe7a61ed501b69d811efd89740f185b6a3c71dacac76d5ccb410e70
+FROM haproxy:2.0-alpine@sha256:3052e8276d550700fe0e4e5ae5d94eebc3afee3b2a300c9424e523361495552d
 
 LABEL maintainer="Thorsten Schifferdecker https://github.com/curx" \
   org.label-schema.vendor="Thorsten Schifferdecker" \
