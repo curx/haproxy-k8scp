@@ -24,7 +24,13 @@ KUBEAPI_VIP_STATS_PORT="12345"
 # - mandatory
 #
 HAPROXY_BACKENDS="backendserver1,backendserver2:port2,..."
+
+# configure the Backend Checks
+# - optional
+#
+HAPROXY_CONF_CHK_OPTS="GET /healthz HTTP/1.1\r\nHost:\ rancher.training.lab"
 ```
+
 
 ## Example
 

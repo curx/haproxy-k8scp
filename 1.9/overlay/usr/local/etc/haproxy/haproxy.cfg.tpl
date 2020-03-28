@@ -25,5 +25,5 @@ frontend fe-kube-apiserver
 
 backend be-kube-apiserver
   balance roundrobin
-  option httpchk GET /healthz
+  option httpchk HAPROXY_CONF_CHK_OPTS
   http-check expect string ok
